@@ -1,0 +1,122 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--footer-bgc-color);
+}
+
+.footer-container {
+   display: flex;
+   flex-wrap: wrap;
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+
+    @media screen and (min-width:1200px) {
+        
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: baseline;
+       
+}
+}
+
+.footer-concact {
+    width: 100%;
+    margin-top: 60px;
+
+    @media screen and (min-width:1200px){
+        margin-top: 0;
+        text-align: left;
+    }
+}
+.footer-wraper{
+    @media screen and (min-width:768px) {
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        text-align: left;
+        width: 100%;
+}
+    @media screen and (min-width:1200px) {
+        display: flex;
+        align-items: baseline;
+        text-align: left;
+        // justify-content: space-between;
+    }
+}
+
+.footer-socnetworks{
+    margin-top: 60px;
+
+    @media screen and (min-width:1200px) {
+        margin-top: 0;
+    }
+}
+
+// .footer {
+//     padding-top: 60px;
+//     padding-bottom: 60px;
+//     background-color: var(--footer-bgc-color);
+// }
+
+// .footer-wraper {
+    // @media screen and (min-width:768px) {
+    //     display: flex;
+    //     justify-content: space-around;
+    //     align-items: baseline;
+    //     text-align: left;
+//     }
+
+// }
+
+// .footer-container {
+//     display: inline-block;
+//     text-align: center;
+   
+//     // @media screen and (min-width:768px) {
+//     //     display: inline-block;
+//     //     text-align: center;
+//     //     align-items: center;
+//     // }
+
+    // @media screen and (min-width:1200px) {
+    //     display: flex;
+    //     justify-content: space-between;
+    //     align-items: baseline; 
+    //     text-align: left; 
+//     // }
+   
+// }
+
+
+
+// .footer-concact {
+//     width: 100%;
+//     margin-top: 60px;
+//     text-align: center;
+//     align-items: center;
+    
+
+//     @media screen and (min-width:768px) {
+//         width: 100%;
+//         align-items: center;
+           
+//         }
+
+//     @media screen and (min-width:1200px) {
+//         display: flex;
+//         flex-wrap: wrap;
+//        width: 570px;
+//        margin-top: 0;
+//     }
+    
+// }
+
+// .footer-socnetworks{
+// margin-top: 60px;
+
+// @media screen and (min-width:1200px) {
+//         margin-top: 0;
+//     }
+// }

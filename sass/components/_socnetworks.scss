@@ -1,0 +1,33 @@
+.socnetworks {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.socnetworks__item {
+    width: 44px;
+    height: 44px;
+}
+
+.socnetworks__link {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: var(--icons-color);
+
+    transition: fill var(--transition-time),
+        background-color var(--transition-time);
+        &:hover,
+            &:focus {
+                background-color: var(--accent-colour);
+                fill: var(--primary-white-color);
+            }
+}
+
+.socnetworks__icon {
+    color: currentColor;
+}
+
