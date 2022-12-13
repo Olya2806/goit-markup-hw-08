@@ -935,6 +935,7 @@ body {
   color: var(--primary-text-color);
   display: flex;
   align-items: center;
+  text-align: left;
 }
 
 .checkbox-link {
