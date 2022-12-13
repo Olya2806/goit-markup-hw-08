@@ -86,11 +86,15 @@
 .checkbox-text {
     font-weight: 400;
     font-size: 14px;
-    line-height: 1.71;
+    line-height: 1.17;
     color: var(--primary-text-color);
     display: flex;
     align-items: center;
     text-align: left;
+
+    @media screen and (min-width:1200px){
+        line-height: 1.71;
+    }
 }
 
 .checkbox-link {

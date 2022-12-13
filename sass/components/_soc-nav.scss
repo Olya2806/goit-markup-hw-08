@@ -1,0 +1,30 @@
+.soc-nav{
+display: flex;
+gap: 10px;
+}
+.soc-nav__item {
+    
+}
+.soc-nav__link {
+    position: relative;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.23;
+    letter-spacing: 0.02em;
+    padding-right: 10px;
+
+    color: var(--accent-colour);
+    &::before {
+        content: "";
+        right: 0;
+        top: 0;
+       position: absolute;
+        width: 1px;
+        height: 100%;
+        border-radius: 1px;
+        background: rgba(33, 33, 33, 0.2);
+            transform: rotate(180deg);
+           
+    }
+}

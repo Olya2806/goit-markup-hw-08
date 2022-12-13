@@ -70,18 +70,46 @@ body {
 }
 
 .page-header-container {
-  display: flex;
   align-items: center;
 }
 
 .main-nav {
-  display: flex;
   align-items: center;
+}
+
+.menu {
+  display: inline-block;
+}
+
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.menu-container {
+  padding: 48px 40px;
+  background-color: var(--primary-white-color);
 }
 
 .site-nav {
   display: flex;
-  margin-left: 91px;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .site-nav__item:not(:last-child) {
@@ -91,13 +119,12 @@ body {
 .site-nav__link {
   position: relative;
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: var(--tittle-text-color);
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 40px;
+  line-height: 1.18;
+  text-align: left;
   letter-spacing: 0.02em;
+  color: var(--tittle-text-color);
   text-decoration: none;
   transition: color var(--transition-time);
 }
@@ -108,19 +135,8 @@ body {
 .site-nav__link.current {
   color: var(--accent-colour);
 }
-.site-nav__link.current::after {
-  content: "";
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  position: absolute;
-  background: #2196F3;
-  border-radius: 2px;
-}
 
 .auth-nav {
-  display: flex;
   margin-left: auto;
   gap: 30px;
 }
@@ -143,6 +159,33 @@ body {
 .auth-nav__icons {
   margin-right: 10px;
   fill: currentColor;
+}
+
+.soc-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.soc-nav__link {
+  position: relative;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.23;
+  letter-spacing: 0.02em;
+  padding-right: 10px;
+  color: var(--accent-colour);
+}
+.soc-nav__link::before {
+  content: "";
+  right: 0;
+  top: 0;
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  border-radius: 1px;
+  background: rgba(33, 33, 33, 0.2);
+  transform: rotate(180deg);
 }
 
 .hero {
@@ -778,7 +821,7 @@ body {
 
 .modal {
   width: 100%;
-  max-width: 450%;
+  max-width: 450px;
   max-height: 609px;
   background-color: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -931,11 +974,16 @@ body {
 .checkbox-text {
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.17;
   color: var(--primary-text-color);
   display: flex;
   align-items: center;
   text-align: left;
+}
+@media screen and (min-width: 1200px) {
+  .checkbox-text {
+    line-height: 1.71;
+  }
 }
 
 .checkbox-link {
