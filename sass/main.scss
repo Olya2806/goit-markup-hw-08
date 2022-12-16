@@ -1,5 +1,6 @@
 @import "./utils/variables" ;
 @import "./utils/reset";
+@import "./utils/hide";
 @import "./utils/body";
 @import "./utils/container";
 @import "./utils/list";
@@ -28,6 +29,3 @@
 @import "./components/modals/backdrop";
 @import "./components/modals/modal";
 @import "./components/modals/form";
-
-@import "./utils/hide";
-

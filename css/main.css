@@ -30,6 +30,17 @@ img {
   width: 100%;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
 body {
   background-color: var(--primary-white-color);
   color: var(--primary-text-color);
@@ -67,6 +78,7 @@ body {
 
 .page-header {
   border-bottom: 1px solid #ececec;
+  position: relative;
 }
 
 .page-header-container {
@@ -74,36 +86,46 @@ body {
 }
 
 .main-nav {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-.menu {
-  display: inline-block;
-}
-
 .menu-button {
-  display: inline-flex;
   margin: 0;
   padding: 0;
   border: none;
   background: transparent;
 }
 
-.menu-button .icon-cross {
+.icon-cross {
   display: none;
 }
 
-.menu-button.is-open .icon-cross {
+.icon-menu {
   display: block;
 }
 
-.menu-button.is-open .icon-menu {
+.menu-container {
   display: none;
 }
 
-.menu-container {
+.menu-container.is-open {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
   padding: 48px 40px;
   background-color: var(--primary-white-color);
+}
+
+.menu-container.is-open .menu-button.icon-cross {
+  display: block;
+}
+
+.menu-container.is-open .menu-button.icon-menu {
+  display: none;
 }
 
 .site-nav {
@@ -1040,15 +1062,4 @@ body {
   display: flex;
   text-align: center;
   justify-content: center;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  clip: rect(0 0 0 0);
 }/*# sourceMappingURL=main.css.map */
