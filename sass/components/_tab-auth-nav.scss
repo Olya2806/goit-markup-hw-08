@@ -1,0 +1,38 @@
+.tab-auth-nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 96px;
+    gap: 10px;
+
+    @media screen and (min-width:1200px){
+        flex-wrap: nowrap;
+        margin-left: 315px;
+        gap: 30px;
+    }
+}
+
+
+.tab-auth-nav__link {
+    display: flex;
+    align-items: center;
+    color: var(--primary-text-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    transition: color var(--transition-time);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-colour);
+    }
+}
+
+
+
+.tab-auth-nav__icons {
+    margin-right: 10px;
+    fill: currentColor;
+}

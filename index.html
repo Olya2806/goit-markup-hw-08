@@ -19,20 +19,21 @@
   <body>
     <header class="page-header">
       <div class="container page-header-container">
-        <div class="menu" >
+        
           <nav class="main-nav">
             <a href="/" class="logo"> <span class="logo-accent">Web</span>Studio </a>
-            <button type="button" class="menu-button js-menu" aria-expanded="false">
+            <button type="button" class="menu-open-button" data-menu-open>
               <svg class="menu-icon" width="40" height="40" aria-label="Кнопка відкриття меню">
-                <use class="icon-menu js-open-menu" href="./images/symbol-defs.svg#icon-menu"></use>
-                <use
-                  class="icon-cross js-close-menu"
-                  href="./images/symbol-defs.svg#icon-close-button"
-                ></use>
+                <use class="icon-menu" href="./images/symbol-defs.svg#icon-menu"></use>
               </svg>
             </button>
-            <div class="menu-container  js-menu-container">
-              <ul class="site-nav list">
+            <div class="menu-container is-hidden" data-menu>
+              <button type="button" class="menu-close-button" data-menu-close>
+                <svg class="menu-icon" width="40" height="40" aria-label="Кнопка закриття меню">
+                  <use class="icon-cross" href="./images/symbol-defs.svg#icon-close-button"></use>
+                </svg>
+              </button>
+              <ul class="site-nav list menu-list">
                 <li class="site-nav__item">
                   <a href="./index.html" class="site-nav__link current">Студія</a>
                 </li>
@@ -42,7 +43,15 @@
                 <li class="site-nav__item"><a href="" class="site-nav__link">Контакти</a></li>
               </ul>
 
-              <ul class="auth-nav list">
+            <div>
+              <ul class="auth-nav list menu-list">
+                <li class="auth-nav__item">
+                  <a href="tel:+380961111111" class="auth-nav__link link auth-nav__tel">
+                    <svg class="auth-nav__icons" width="10" height="16">
+                      <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+                    </svg>
+                    +38 096 111 11 11</a>
+                </li>
                 <li class="auth-nav__item">
                   <a href="mailto:info@devstudio.com" class="auth-nav__link link">
                     <svg class="auth-nav__icons" width="16" height="12">
@@ -50,17 +59,10 @@
                     </svg>
                     info@devstudio.com
                   </a>
-                </li>
-                <li class="auth-nav__item">
-                  <a href="tel:+380961111111" class="auth-nav__link link">
-                    <svg class="auth-nav__icons" width="10" height="16">
-                      <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-                    </svg>
-                    +38 096 111 11 11</a
-                  >
+                  
                 </li>
               </ul>
-              <ul class="soc-nav list">
+              <ul class="soc-nav list menu-list">
                 <li class="soc-nav__item">
                   <a href="#" class="soc-nav__link">Instagram</a>
                 </li>
@@ -74,9 +76,36 @@
                   <a href="#" class="soc-nav__link">LinkedIn</a>
                 </li>
               </ul>
+              </div>
             </div>
+
+           <div class="tab-menu">
+              <ul class="tab-site-nav list">
+                <li class="tab-site-nav__item"><a href="./index.html" class="tab-site-nav__link current">Студія</a></li>
+                <li class="tab-site-nav__item"><a href="./portfolio.html" class="tab-site-nav__link">Портфоліо</a></li>
+                <li class="tab-site-nav__item"><a href="" class="tab-site-nav__link">Контакти</a></li>
+              </ul>
+              
+              <ul class="tab-auth-nav list">
+                <li class="tab-auth-nav__item">
+                  <a href="mailto:info@devstudio.com" class="tab-auth-nav__link link">
+                    <svg class="tab-auth-nav__icons" width="16" height="12">
+                      <use href="./images/symbol-defs.svg#icon-envelope"></use>
+                    </svg>
+                    info@devstudio.com
+                  </a>
+                </li>
+                <li class="tab-auth-nav__item">
+                  <a href="tel:+380961111111" class="tab-auth-nav__link link">
+                    <svg class="tab-auth-nav__icons" width="10" height="16">
+                      <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+                    </svg>
+                    +38 096 111 11 11</a>
+                </li>
+              </ul>
+           </div>
           </nav>
-        </div>
+       
       </div>
     </header>
     <main>
