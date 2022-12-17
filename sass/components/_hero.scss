@@ -14,26 +14,26 @@
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  background-image: var(--hero-grd), url(../../images/bgi-hero-tel.jpg);
+  background-image: var(--hero-grd), url(../images/bgi-hero-tel.jpg);
   background-color: var(--footer-bgc-color);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
   @include retina {
-    background-image: var(--hero-grd), url(../../images/bgi-hero-tel-2x.jpg);
+    background-image: var(--hero-grd), url(../images/bgi-hero-tel-2x.jpg);
   }
 
   @media screen and (min-width: 480px) {
-    background-image: var(--hero-grd), url(../../images/bgi-hero-tab.jpg);
+    background-image: var(--hero-grd), url(../images/bgi-hero-tab.jpg);
     @include retina {
-      background-image: var(--hero-grd), url(../../images/bgi-hero-tab-2x.jpg);
+      background-image: var(--hero-grd), url(../images/bgi-hero-tab-2x.jpg);
     }
   }
   @media screen and (min-width: 768px) {
-    background-image: var(--hero-grd), url(../../images/bgi-hero.jpg);
+    background-image: var(--hero-grd), url(../images/bgi-hero.jpg);
     @include retina {
-      background-image: var(--hero-grd), url(../../images/bgi-hero-2x.jpg);
+      background-image: var(--hero-grd), url(../images/bgi-hero-2x.jpg);
     }
   }
 }
