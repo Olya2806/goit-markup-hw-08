@@ -48,8 +48,16 @@
 .projects-wrapper {
     position: relative;
     overflow: hidden;
-}
 
+    
+}
+.project-img{
+    width: 100%;
+
+    @media screen  and (min-width:480px){
+        width: 370px;
+    }
+}
 
 .projects-example-text {
     position: absolute;

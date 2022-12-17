@@ -24,13 +24,6 @@ p {
   margin: 0;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  width: 100%;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -333,7 +326,6 @@ body {
 }
 
 .hero {
-  /* background-color: var(--footer-bgc-color); */
   padding-top: 118px;
   padding-bottom: 118px;
   text-align: center;
@@ -350,20 +342,35 @@ body {
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  background-image: var(--hero-grd), url(../../images/bgi-hero-tel.jpg);
+  background-image: var(--hero-grd), url(../images/bgi-hero-tel.jpg);
   background-color: var(--footer-bgc-color);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero-overlay {
+    background-image: var(--hero-grd), url(../images/bgi-hero-tel-2x.jpg);
+  }
+}
 @media screen and (min-width: 480px) {
   .hero-overlay {
-    background-image: var(--hero-grd), url(../../images/bgi-hero-tab.jpg);
+    background-image: var(--hero-grd), url(../images/bgi-hero-tab.jpg);
+  }
+}
+@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+  .hero-overlay {
+    background-image: var(--hero-grd), url(../images/bgi-hero-tab-2x.jpg);
   }
 }
 @media screen and (min-width: 768px) {
   .hero-overlay {
-    background-image: var(--hero-grd), url(../../images/bgi-hero.jpg);
+    background-image: var(--hero-grd), url(../images/bgi-hero.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero-overlay {
+    background-image: var(--hero-grd), url(../images/bgi-hero-2x.jpg);
   }
 }
 
@@ -670,12 +677,14 @@ body {
 
 .filter {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 50px;
-  justify-content: center;
+  gap: 8px;
 }
-
-.filter__item:not(:last-child) {
-  margin-right: 8px;
+@media screen and (min-width: 768px) {
+  .filter {
+    justify-content: center;
+  }
 }
 
 .projects {
