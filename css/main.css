@@ -73,6 +73,14 @@ body {
 .page-header {
   border-bottom: 1px solid #ececec;
   position: relative;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+@media screen and (min-width: 768px) {
+  .page-header {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .page-header-container {
@@ -204,14 +212,20 @@ body {
   align-items: center;
   color: var(--primary-text-color);
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.7;
   letter-spacing: 0.02em;
   text-decoration: none;
   transition: color var(--transition-time);
 }
 .tab-auth-nav__link:hover, .tab-auth-nav__link:focus {
   color: var(--accent-colour);
+}
+@media screen and (min-width: 1200px) {
+  .tab-auth-nav__link {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 
 .tab-auth-nav__icons {
@@ -456,8 +470,13 @@ body {
   }
 }
 
-.section__features {
-  padding-bottom: 0;
+.works-section {
+  padding: 0;
+}
+@media screen and (min-width: 1200px) {
+  .works-section {
+    padding-bottom: 94px;
+  }
 }
 
 .section__tittle,
@@ -466,9 +485,17 @@ body {
   margin-bottom: 30px;
   color: var(--tittle-text-color);
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.2;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .section__tittle,
+.portfolio-tittle {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.2;
+  }
 }
 
 .features {
@@ -509,7 +536,13 @@ body {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
+  text-align: center;
   text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .features__tittle {
+    text-align: left;
+  }
 }
 
 .features__text {
@@ -564,6 +597,21 @@ body {
   padding-bottom: 30px;
   background: var(--primary-white-color);
 }
+@media screen and (min-width: 480px) {
+  .team-list__member {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team-list__member {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-list__member {
+    width: 270px;
+  }
+}
 
 .team-list {
   display: flex;
@@ -585,6 +633,10 @@ body {
   .team-list__item {
     width: calc((100% - 90px) / 4);
   }
+}
+
+.team-list__images {
+  width: 100%;
 }
 
 .team-list__tittle {
@@ -660,7 +712,9 @@ body {
 .clients__link {
   width: 100%;
   height: 100%;
-  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--icons-color);
   border-radius: 4px;
   color: var(--icons-color);
@@ -739,6 +793,15 @@ body {
   overflow: hidden;
 }
 
+.project-img {
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .project-img {
+    width: 370px;
+  }
+}
+
 .projects-example-text {
   position: absolute;
   top: 0;
@@ -808,7 +871,6 @@ body {
 
 .footer-concact {
   width: 100%;
-  margin-top: 60px;
 }
 @media screen and (min-width: 1200px) {
   .footer-concact {
@@ -837,7 +899,7 @@ body {
 .footer-socnetworks {
   margin-top: 60px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .footer-socnetworks {
     margin-top: 0;
   }
@@ -985,7 +1047,6 @@ body {
 .modal {
   width: 100%;
   max-width: 450px;
-  max-height: 609px;
   background-color: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -999,14 +1060,12 @@ body {
 }
 @media screen and (min-width: 480px) {
   .modal {
-    width: 450px;
-    height: 609px;
+    max-width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {
   .modal {
-    width: 528px;
-    height: 581px;
+    max-width: 528px;
   }
 }
 
@@ -1136,7 +1195,7 @@ body {
 
 .checkbox-text {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.17;
   color: var(--primary-text-color);
   display: flex;
@@ -1146,6 +1205,7 @@ body {
 @media screen and (min-width: 1200px) {
   .checkbox-text {
     line-height: 1.71;
+    font-size: 14px;
   }
 }
 

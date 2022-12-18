@@ -23,7 +23,7 @@
 
 .footer-concact {
     width: 100%;
-    margin-top: 60px;
+    // margin-top: 60px;
 
     @media screen and (min-width:1200px){
         margin-top: 0;
@@ -49,7 +49,7 @@
 .footer-socnetworks{
     margin-top: 60px;
 
-    @media screen and (min-width:1200px) {
+    @media screen and (min-width:768px) {
         margin-top: 0;
     }
 }

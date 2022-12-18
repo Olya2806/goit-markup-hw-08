@@ -17,8 +17,9 @@
     align-items: center;
     color: var(--primary-text-color);
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 12px;
+        line-height: 1.7;
+    
     letter-spacing: 0.02em;
     text-decoration: none;
 
@@ -28,6 +29,13 @@
     &:focus {
         color: var(--accent-colour);
     }
+
+        @media screen and (min-width:1200px){
+            font-size: 14px;
+            line-height: 1.14;
+        }
+                
+        
 }
 
 
